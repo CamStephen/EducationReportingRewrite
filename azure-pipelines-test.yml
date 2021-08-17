@@ -1,0 +1,35 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  name: Default
+  
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+  majorVersion: '1'
+  minorVersion: '0'
+  patchVersion: '0'
+
+steps:
+- task: VSBuild@1
+  displayName: 'Build Main Solution '
+  inputs:
+    platform: '$(BuildPlatform)'
+    configuration: '$(BuildConfiguration)'
+    
+- task: CopyFiles@2
+  displayName: 'Copy Reports and Folder Structure'
+  inputs:
+    SourceFolder: PSOnline.Setup.Bootstrapper
+    Contents: |
+     **\*  
+    TargetFolder: '$(build.artifactstagingdirectory) '
+    flattenFolders: true
+
