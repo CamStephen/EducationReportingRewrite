@@ -29,9 +29,10 @@ steps:
   inputs:
     SourceFolder: '$(build.ArtifactStagingDirectory)/ReportsDeployment'
     Contents: |
+        **\*.yml
+        **\*.sln
         **\.git\*
         **\.vs\*
-        **\.vs\*.ymal
 
 - task: ArchiveFiles@2
   displayName: 'Archive Artifact Staging Directory'
