@@ -21,9 +21,11 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy Reports and Folder Structure'
   inputs:
+    SourceFolder: $(build.StagingDirectory)
     Contents: |
      **\*
     TargetFolder: '$(build.ArtifactStagingDirectory)/ReportsDeployment'
+
 - task: DeleteFiles@1
   displayName: 'Removing Project & Build Files'
   inputs:
@@ -31,8 +33,17 @@ steps:
     Contents: |
         **\*.yml
         **\*.sln
+
 - task: DeleteFiles@1
-  displayName: 'Removing .git Files'
+  displayName: 'Removing .git Folder'
+  inputs:
+    SourceFolder: '$(build.ArtifactStagingDirectory)/ReportsDeployment/.git'
+    Contents: |
+        **\*
+    RemoveSourceFolder: true
+
+- task: DeleteFiles@1
+  displayName: 'Removing .vs Folder'
   inputs:
     SourceFolder: '$(build.ArtifactStagingDirectory)/ReportsDeployment/.git'
     Contents: |
@@ -45,13 +56,13 @@ steps:
     rootFolderOrFile: '$(build.ArtifactStagingDirectory)/ReportsDeployment'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/ReportsDeployment.zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/Reports.zip'
     replaceExistingArchive: true
 
 - task: PublishPipelineArtifact@1
   displayName: 'Publish Artifact'
   inputs:
-    targetPath: '$(build.ArtifactStagingDirectory)/ReportsDeployment.zip'
-    artifactName: 'Build $(Build.BuildId) ($(majorVersion).$(minorVersion).$(patchVersion))'
+    targetPath: '$(build.ArtifactStagingDirectory)'
+    artifactName: 'Reporting Education Standard $(majorVersion).$(minorVersion).$(patchVersion))'
     artifactType: 'pipeline'
   condition: succeededOrFailed()
