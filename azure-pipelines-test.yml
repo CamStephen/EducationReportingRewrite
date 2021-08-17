@@ -18,9 +18,17 @@ variables:
   patchVersion: '0'
 
 steps:    
-- task: ArchiveFiles@2
-  displayName: 'Archive Database Scripts'
+- task: CopyFiles@2
+  displayName: 'Copy Reports and Folder Structure'
   inputs:
+    Contents: |
+     **\*
+    TargetFolder: '$(build.ArtifactStagingDirectory)/ReportsDeployment'
+
+- task: ArchiveFiles@2
+  displayName: 'Archive Artifact Staging Directory'
+  inputs:
+    rootFolderOrFile: '$(build.ArtifactStagingDirectory)/ReportsDeployment'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/ReportsDeployment.zip'
@@ -29,7 +37,7 @@ steps:
 - task: PublishPipelineArtifact@1
   displayName: 'Publish Artifact'
   inputs:
-    targetPath: '$(build.artifactstagingdirectory)'
+    targetPath: '$(build.ArtifactStagingDirectory)/ReportsDeployment.zip'
     artifactName: 'Build $(Build.BuildId) ($(majorVersion).$(minorVersion).$(patchVersion))'
     artifactType: 'pipeline'
   condition: succeededOrFailed()
