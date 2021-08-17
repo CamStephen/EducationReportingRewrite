@@ -27,9 +27,7 @@ steps:
 - task: CopyFiles@2
   displayName: 'Copy Reports and Folder Structure'
   inputs:
-    SourceFolder: PSOnline.Setup.Bootstrapper
     Contents: |
-     **\*  
-    TargetFolder: '$(build.artifactstagingdirectory) '
-    flattenFolders: true
+     **\*
+    TargetFolder: '$(build.ArtifactStagingdirectory)'
 
