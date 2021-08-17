@@ -59,6 +59,14 @@ steps:
     archiveFile: '$(Build.ArtifactStagingDirectory)/Reports.zip'
     replaceExistingArchive: true
 
+- task: DeleteFiles@1
+  displayName: 'Removing Redundent Reports Folder'
+  inputs:
+    SourceFolder: '$(build.ArtifactStagingDirectory)/Reports'
+    Contents: |
+        **\*
+    RemoveSourceFolder: true
+
 - task: CopyFiles@2
   displayName: 'Copy Scripts'
   inputs:
@@ -75,6 +83,14 @@ steps:
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/Scripts.zip'
     replaceExistingArchive: true
+
+- task: DeleteFiles@1
+  displayName: 'Removing Redundent Scripts Folder'
+  inputs:
+    SourceFolder: '$(build.ArtifactStagingDirectory)/Scripts'
+    Contents: |
+        **\*
+    RemoveSourceFolder: true
 
 - task: PublishPipelineArtifact@1
   displayName: 'Publish Artifact'
