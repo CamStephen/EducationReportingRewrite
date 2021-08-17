@@ -24,6 +24,14 @@ steps:
     Contents: |
      **\*
     TargetFolder: '$(build.ArtifactStagingDirectory)/ReportsDeployment'
+- task: DeleteFiles@1
+  displayName: 'Removing Project & Build Files'
+  inputs:
+    SourceFolder: '$(build.ArtifactStagingDirectory)/ReportsDeployment'
+    Contents: |
+        **\.git\*
+        **\.vs\*
+        **\.vs\*.ymal
 
 - task: ArchiveFiles@2
   displayName: 'Archive Artifact Staging Directory'
