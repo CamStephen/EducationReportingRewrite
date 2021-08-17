@@ -24,12 +24,12 @@ steps:
     SourceFolder: $(Build.Repository.LocalPath)
     Contents: |
      **\*
-    TargetFolder: '$(build.ArtifactStagingDirectory)/ReportsDeployment'
+    TargetFolder: '$(build.ArtifactStagingDirectory)/Reports'
 
 - task: DeleteFiles@1
   displayName: 'Removing Project & Build Files'
   inputs:
-    SourceFolder: '$(build.ArtifactStagingDirectory)/ReportsDeployment'
+    SourceFolder: '$(build.ArtifactStagingDirectory)/Reports'
     Contents: |
         **\*.yml
         **\*.sln
@@ -37,7 +37,7 @@ steps:
 - task: DeleteFiles@1
   displayName: 'Removing .git Folder'
   inputs:
-    SourceFolder: '$(build.ArtifactStagingDirectory)/ReportsDeployment/.git'
+    SourceFolder: '$(build.ArtifactStagingDirectory)/Reports/.git'
     Contents: |
         **\*
     RemoveSourceFolder: true
@@ -45,7 +45,7 @@ steps:
 - task: DeleteFiles@1
   displayName: 'Removing .vs Folder'
   inputs:
-    SourceFolder: '$(build.ArtifactStagingDirectory)/ReportsDeployment/.git'
+    SourceFolder: '$(build.ArtifactStagingDirectory)/Reports/.vs'
     Contents: |
         **\*
     RemoveSourceFolder: true
@@ -53,10 +53,27 @@ steps:
 - task: ArchiveFiles@2
   displayName: 'Archive Artifact Staging Directory'
   inputs:
-    rootFolderOrFile: '$(build.ArtifactStagingDirectory)/ReportsDeployment'
+    rootFolderOrFile: '$(build.ArtifactStagingDirectory)/Reports'
     includeRootFolder: true
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/Reports.zip'
+    replaceExistingArchive: true
+
+- task: CopyFiles@2
+  displayName: 'Copy Scripts'
+  inputs:
+    SourceFolder: $(Build.Repository.LocalPath)/Scripts
+    Contents: |
+     *.sql
+    TargetFolder: '$(build.ArtifactStagingDirectory)/Scripts'
+
+- task: ArchiveFiles@2
+  displayName: 'Archive Scripts'
+  inputs:
+    rootFolderOrFile: '$(build.ArtifactStagingDirectory)/Scripts'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/Scripts.zip'
     replaceExistingArchive: true
 
 - task: PublishPipelineArtifact@1
