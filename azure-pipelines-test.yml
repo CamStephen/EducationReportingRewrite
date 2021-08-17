@@ -34,8 +34,22 @@ steps:
         **\*.sln
         **\**\*.rptproj
         **\**\*.rptproj.rsuser
-        **\.git\*
-        **\.vs\*
+
+- task: DeleteFiles@1
+  displayName: 'Removing .git Folder'
+  inputs:
+    SourceFolder: '$(build.ArtifactStagingDirectory)/Reports/.git'
+    Contents: |
+        **\*
+    RemoveSourceFolder: true
+
+- task: DeleteFiles@1
+  displayName: 'Removing .vs Folder'
+  inputs:
+    SourceFolder: '$(build.ArtifactStagingDirectory)/Reports/.vs'
+    Contents: |
+        **\*
+    RemoveSourceFolder: true
 
 - task: DeleteFiles@1
   displayName: 'Removing Scripts Folder'
