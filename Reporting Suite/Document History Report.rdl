@@ -5125,7 +5125,6 @@
                           <PaddingBottom>2pt</PaddingBottom>
                         </Style>
                       </Textbox>
-                      <rd:Selected>true</rd:Selected>
                     </CellContents>
                   </TablixHeader>
                   <TablixMembers>
@@ -5385,7 +5384,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Document History / Tracking Report</Value>
+                      <Value>Document Tracking Report</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>18pt</FontSize>
