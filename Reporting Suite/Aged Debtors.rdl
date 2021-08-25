@@ -9,7 +9,7 @@
     </DataSource>
     <DataSource Name="dsselectedDatabase">
       <ConnectionProperties>
-        <DataProvider>OLEDB-MD</DataProvider>
+        <DataProvider>SQL</DataProvider>
         <ConnectString>="Data Source=" &amp; Parameters!ServerName.Value &amp; ";Initial Catalog=" &amp; Parameters!CATALOG.Value &amp; ";Integrated Security = SSPI"</ConnectString>
       </ConnectionProperties>
       <rd:SecurityType>None</rd:SecurityType>

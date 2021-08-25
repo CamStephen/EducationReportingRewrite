@@ -1598,6 +1598,7 @@
                                               <PaddingBottom>2pt</PaddingBottom>
                                             </Style>
                                           </Textbox>
+                                          <rd:Selected>true</rd:Selected>
                                         </CellContents>
                                       </TablixCell>
                                     </TablixCells>
@@ -6291,7 +6292,7 @@
               <Source>External</Source>
               <Value>="/images/PoweredByPSF.jpg"</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0.20099cm</Top>
+              <Top>0cm</Top>
               <Left>11.21756cm</Left>
               <Height>1.34039cm</Height>
               <Width>6.08449cm</Width>
