@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="dsLiveReports">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=BI-DEV\DEV2012V600;Initial Catalog=DevEduV6B003</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>30151392-d701-4251-90c6-11367275e0cd</DataSourceID>
+</RptDataSource>
