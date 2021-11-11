@@ -97,40 +97,40 @@
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Period1">
-          <Value>=cint(IIf(Fields!PERIOD.Value = "01",Fields!BALANCE.Value,0 ))</Value>
+          <Value>=cdec(IIf(Fields!PERIOD.Value = "01",Fields!BALANCE.Value,0 ))</Value>
         </Field>
         <Field Name="Period2">
-          <Value>=cint(IIf(Fields!PERIOD.Value = "02",Fields!BALANCE.Value,0))</Value>
+          <Value>=cdec(IIf(Fields!PERIOD.Value = "02",Fields!BALANCE.Value,0))</Value>
         </Field>
         <Field Name="Period3">
-          <Value>=cint(IIf(Fields!PERIOD.Value = "03",Fields!BALANCE.Value,0))</Value>
+          <Value>=cdec(IIf(Fields!PERIOD.Value = "03",Fields!BALANCE.Value,0))</Value>
         </Field>
         <Field Name="Period4">
-          <Value>=cint(IIf(Fields!PERIOD.Value = "04",Fields!BALANCE.Value,0))</Value>
+          <Value>=cdec(IIf(Fields!PERIOD.Value = "04",Fields!BALANCE.Value,0))</Value>
         </Field>
         <Field Name="Period5">
-          <Value>=cint(IIf(Fields!PERIOD.Value = "05",Fields!BALANCE.Value,0))</Value>
+          <Value>=cdec(IIf(Fields!PERIOD.Value = "05",Fields!BALANCE.Value,0))</Value>
         </Field>
         <Field Name="Period6">
-          <Value>=cint(IIf(Fields!PERIOD.Value = "06",Fields!BALANCE.Value,0))</Value>
+          <Value>=cdec(IIf(Fields!PERIOD.Value = "06",Fields!BALANCE.Value,0))</Value>
         </Field>
         <Field Name="Period7">
-          <Value>=cint(IIf(Fields!PERIOD.Value = "07",Fields!BALANCE.Value,0))</Value>
+          <Value>=cdec(IIf(Fields!PERIOD.Value = "07",Fields!BALANCE.Value,0))</Value>
         </Field>
         <Field Name="Period8">
-          <Value>=cint(IIf(Fields!PERIOD.Value = "08",Fields!BALANCE.Value,0))</Value>
+          <Value>=cdec(IIf(Fields!PERIOD.Value = "08",Fields!BALANCE.Value,0))</Value>
         </Field>
         <Field Name="Period9">
-          <Value>=cint(IIf(Fields!PERIOD.Value = "09",Fields!BALANCE.Value,0))</Value>
+          <Value>=cdec(IIf(Fields!PERIOD.Value = "09",Fields!BALANCE.Value,0))</Value>
         </Field>
         <Field Name="Period10">
-          <Value>=cint(IIf(Fields!PERIOD.Value = "10",Fields!BALANCE.Value,0))</Value>
+          <Value>=cdec(IIf(Fields!PERIOD.Value = "10",Fields!BALANCE.Value,0))</Value>
         </Field>
         <Field Name="Period11">
-          <Value>=cint(IIf(Fields!PERIOD.Value = "11",Fields!BALANCE.Value,0))</Value>
+          <Value>=cdec(IIf(Fields!PERIOD.Value = "11",Fields!BALANCE.Value,0))</Value>
         </Field>
         <Field Name="Period12">
-          <Value>=cint(IIf(Fields!PERIOD.Value = "12",Fields!BALANCE.Value,0))</Value>
+          <Value>=cdec(IIf(Fields!PERIOD.Value = "12",Fields!BALANCE.Value,0))</Value>
         </Field>
         <Field Name="NomACCComb">
           <Value>=Fields!NOMINAL.Value &amp; Fields!ACCOUNT.Value</Value>
