@@ -108,9 +108,7 @@ iif(mid(Fields!NOMINAL.Value,4,4)="7150","Lettings/Hirings","")))))</Value>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="DocAge">
-          <Value>=DateDiff("d",cdate(Fields!DOCDATE.Value),
-Iif(Fields!PERIODEND.Value &lt;now, Fields!PERIODEND.Value, now)
-)</Value>
+          <Value>=DateDiff("d",cdate(Fields!DOCDATE.Value),Parameters!DATE.Value)</Value>
         </Field>
         <Field Name="PRENAME">
           <DataField>PRENAME</DataField>
