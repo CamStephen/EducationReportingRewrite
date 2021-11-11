@@ -68,8 +68,16 @@
           <QueryParameter Name="@VALUE">
             <Value>=Parameters!VALUE.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="@SUPPLIER">
+            <Value>=Parameters!SUPPLIER.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+          <QueryParameter Name="@SearchSupplier">
+            <Value>=Parameters!SearchSupplier.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
         </QueryParameters>
-        <CommandText>exec PSF_RPT_EDU_GET_PURCHASING_DOCUMENTS @DOMAINNAME,@COMPANYCODE,@LOCATION,@DOCTYPE,@STATUS,@DATEFROM,@DATETO,@SearchNominal,@CORENOMINAL,@SearchAccount,@ACCOUNT,@SearchLedger,@LEDGER,@SearchValue,@VALUE</CommandText>
+        <CommandText>exec PSF_RPT_EDU_GET_PURCHASING_DOCUMENTS @DOMAINNAME,@COMPANYCODE,@LOCATION,@DOCTYPE,@STATUS,@DATEFROM,@DATETO,@SearchNominal,@CORENOMINAL,@SearchAccount,@ACCOUNT,@SearchLedger,@LEDGER,@SearchValue,@VALUE,@SUPPLIER,@SearchSupplier</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <Fields>
