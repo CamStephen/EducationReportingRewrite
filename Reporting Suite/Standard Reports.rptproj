@@ -83,8 +83,10 @@
     <Report Include="Intra Company Transactions Report.rdl" />
     <Report Include="Ledger Chart of Accounts.rdl" />
     <Report Include="Ledger Income Expenditure Summary.rdl" />
+    <Report Include="Management Accounts - OLD.rdl" />
     <Report Include="Management Accounts by Cost Centre.rdl" />
     <Report Include="Management Accounts Export.rdl" />
+    <Report Include="Management Accounts Trend - OLD.rdl" />
     <Report Include="Management Accounts Trend.rdl" />
     <Report Include="Management Accounts.rdl" />
     <Report Include="Nominal Summary Report.rdl" />
