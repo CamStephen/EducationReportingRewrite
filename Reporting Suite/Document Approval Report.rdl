@@ -133,7 +133,7 @@
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>PSF_RPT_EDU_GET_PO_DOCUMENT_APROVAL_DETAILS</CommandText>
+        <CommandText>PSF_RPT_EDU_GET_PO_DOCUMENT_APPROVAL_DETAILS</CommandText>
       </Query>
       <Fields>
         <Field Name="Company">
@@ -1028,6 +1028,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
