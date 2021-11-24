@@ -52,9 +52,6 @@
     <Report Include="Create Reporting Home Table V6 Build 003.7.sql">
       <MimeType>application/octet-stream</MimeType>
     </Report>
-    <Report Include="CREATE REPORTING SUITE SCRIPTS V6 BUILD 003.9.sql">
-      <MimeType>application/octet-stream</MimeType>
-    </Report>
     <Report Include="Create Show bank details Options Account User fields.sql">
       <MimeType>application/octet-stream</MimeType>
     </Report>
