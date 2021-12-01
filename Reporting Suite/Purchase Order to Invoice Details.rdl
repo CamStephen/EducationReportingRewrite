@@ -1929,7 +1929,7 @@ order by Account</CommandText>
             <Top>0.23165cm</Top>
             <Left>0.19786cm</Left>
             <Height>1.8cm</Height>
-            <Width>47.82251cm</Width>
+            <Width>47.8225cm</Width>
             <Visibility>
               <Hidden>=iif(First(Fields!Supplier.Value, "DsGetInvoiced")= nothing,TRUE,FALSE)</Hidden>
             </Visibility>
@@ -1979,7 +1979,7 @@ order by Account</CommandText>
                   <Style />
                 </Paragraph>
               </Paragraphs>
-              <Top>0.42334cm</Top>
+              <Top>0.39943cm</Top>
               <Left>0.14243cm</Left>
               <Height>1.76458cm</Height>
               <Width>22.02081cm</Width>
@@ -2233,41 +2233,6 @@ order by Account</CommandText>
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Version 6 Build 003.8</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>6pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.91185cm</Top>
-              <Left>20.32392cm</Left>
-              <Height>0.6cm</Height>
-              <Width>2.25cm</Width>
-              <ZIndex>5</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="txtFooter_PrintBy">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -2308,7 +2273,7 @@ order by Account</CommandText>
               <Left>0.11958cm</Left>
               <Height>0.63492cm</Height>
               <Width>6.32823cm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <BackgroundColor>White</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>

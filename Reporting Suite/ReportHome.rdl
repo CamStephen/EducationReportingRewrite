@@ -6306,7 +6306,7 @@ FROM dbo.X_RPT_REPORTINGLIST R1
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Version 6 Build 003.9</Value>
+                      <Value>Version 6 Build 004.00</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>6pt</FontSize>
@@ -6321,9 +6321,9 @@ FROM dbo.X_RPT_REPORTINGLIST R1
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0.22216cm</Top>
-              <Left>22.77759cm</Left>
+              <Left>19.56721cm</Left>
               <Height>0.6cm</Height>
-              <Width>2.43228cm</Width>
+              <Width>5.64266cm</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>

@@ -1712,40 +1712,6 @@ Where LEDGER = 'PARAMETERS' and ACCOUNT = ( Select left(MD.DOCTYPE,2) from M_DOC
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
-            <Textbox Name="PageNumber2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Version 6 Build 003.9</Value>
-                      <Style>
-                        <FontFamily>CALIBRI</FontFamily>
-                        <FontSize>6pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>PageNumber</rd:DefaultName>
-              <Top>1.68013cm</Top>
-              <Left>15.92494cm</Left>
-              <Height>0.69862cm</Height>
-              <Width>2.11635cm</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>4pt</PaddingLeft>
-                <PaddingRight>4pt</PaddingRight>
-                <PaddingTop>4pt</PaddingTop>
-                <PaddingBottom>4pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="Textbox4">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -1767,11 +1733,10 @@ Where LEDGER = 'PARAMETERS' and ACCOUNT = ( Select left(MD.DOCTYPE,2) from M_DOC
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox4</rd:DefaultName>
-              <Top>0.06353cm</Top>
+              <Top>0.03795cm</Top>
               <Left>0.71182cm</Left>
               <Height>0.45861cm</Height>
               <Width>17.32947cm</Width>
-              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -1811,7 +1776,7 @@ Where LEDGER = 'PARAMETERS' and ACCOUNT = ( Select left(MD.DOCTYPE,2) from M_DOC
               <Left>0.71182cm</Left>
               <Height>0.6cm</Height>
               <Width>6.97803cm</Width>
-              <ZIndex>2</ZIndex>
+              <ZIndex>1</ZIndex>
               <Visibility>
                 <Hidden>=IIF(Globals!PageNumber = Globals!TotalPages,False,True)</Hidden>
               </Visibility>
@@ -1855,7 +1820,7 @@ Where LEDGER = 'PARAMETERS' and ACCOUNT = ( Select left(MD.DOCTYPE,2) from M_DOC
               <Left>7.76041cm</Left>
               <Height>0.6cm</Height>
               <Width>10.28088cm</Width>
-              <ZIndex>3</ZIndex>
+              <ZIndex>2</ZIndex>
               <Visibility>
                 <Hidden>=IIF(Globals!PageNumber = Globals!TotalPages,False,True)</Hidden>
               </Visibility>
@@ -1877,7 +1842,7 @@ Where LEDGER = 'PARAMETERS' and ACCOUNT = ( Select left(MD.DOCTYPE,2) from M_DOC
               <Left>6.77188cm</Left>
               <Height>1.03172cm</Height>
               <Width>5.22155cm</Width>
-              <ZIndex>4</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>

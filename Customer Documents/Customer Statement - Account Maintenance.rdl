@@ -3993,7 +3993,7 @@ AND ACCOUNT = @ACCOUNT</CommandText>
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>ADDRESSNAME</rd:DefaultName>
-              <Top>3.19634cm</Top>
+              <Top>3.23162cm</Top>
               <Left>0.5cm</Left>
               <Height>3.49729cm</Height>
               <Width>7.66668cm</Width>
@@ -4493,44 +4493,6 @@ iif(len(first(fields!COUNTRY.value,"Company"))=0,"", ", "+First(Fields!COUNTRY.V
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="Textbox2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Version 6 Build 003.9</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>6pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>4.34563cm</Top>
-              <Left>12.67946cm</Left>
-              <Height>0.52908cm</Height>
-              <Width>5.15001cm</Width>
-              <ZIndex>5</ZIndex>
-              <Visibility>
-                <Hidden>true</Hidden>
-              </Visibility>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
           </ReportItems>
           <Style />
         </PageFooter>

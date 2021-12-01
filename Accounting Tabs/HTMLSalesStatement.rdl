@@ -5271,7 +5271,7 @@ iif(len(first(fields!EMAIL_ADDRESS.value,"AcademyAddress"))=0,"","Email: "+first
               <Value>="/images/"+Parameters!ACCOUNTCODE.Value+".jpg"</Value>
               <Sizing>FitProportional</Sizing>
               <Top>0.95703cm</Top>
-              <Left>12.75335cm</Left>
+              <Left>12.72689cm</Left>
               <Height>1.82365cm</Height>
               <Width>5.32601cm</Width>
               <ZIndex>8</ZIndex>
@@ -5487,41 +5487,6 @@ iif(len(first(fields!COUNTRY.value,"Company"))=0,"", vbcrlf+"Registered in Engla
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Textbox11">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Version 6 Build 003.9</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>6pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>5.12778cm</Top>
-              <Left>15.11399cm</Left>
-              <Height>0.6cm</Height>
-              <Width>2.96537cm</Width>
-              <ZIndex>5</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Image Name="Image2">
               <Source>External</Source>
               <Value>="/images/PoweredByPSF.jpg"</Value>
@@ -5530,7 +5495,7 @@ iif(len(first(fields!COUNTRY.value,"Company"))=0,"", vbcrlf+"Registered in Engla
               <Left>7.20271cm</Left>
               <Height>1.03172cm</Height>
               <Width>5.22155cm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>

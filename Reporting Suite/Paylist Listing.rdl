@@ -2589,41 +2589,6 @@
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="Textbox10">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Version 6 Build 003.9</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>6pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>1.92581cm</Top>
-              <Left>18.03872cm</Left>
-              <Height>0.6cm</Height>
-              <Width>2.50883cm</Width>
-              <ZIndex>5</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="TxtFooterDate">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -2653,7 +2618,7 @@
               <Left>12.37328cm</Left>
               <Height>0.6cm</Height>
               <Width>4.2579cm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>5</ZIndex>
               <Visibility>
                 <Hidden>=IIF(Globals!PageNumber = Globals!TotalPages,False,True)</Hidden>
               </Visibility>
@@ -2696,7 +2661,7 @@
               <Left>0.04368cm</Left>
               <Height>0.6cm</Height>
               <Width>6.17132cm</Width>
-              <ZIndex>7</ZIndex>
+              <ZIndex>6</ZIndex>
               <Visibility>
                 <Hidden>=IIF(Globals!PageNumber = Globals!TotalPages,False,True)</Hidden>
               </Visibility>
@@ -2740,7 +2705,7 @@
               <Left>6.32083cm</Left>
               <Height>0.6cm</Height>
               <Width>5.94661cm</Width>
-              <ZIndex>8</ZIndex>
+              <ZIndex>7</ZIndex>
               <Visibility>
                 <Hidden>=IIF(Globals!PageNumber = Globals!TotalPages,False,True)</Hidden>
               </Visibility>
@@ -2794,7 +2759,7 @@
               <Left>0.04368cm</Left>
               <Height>0.63492cm</Height>
               <Width>8.68186cm</Width>
-              <ZIndex>9</ZIndex>
+              <ZIndex>8</ZIndex>
               <Style>
                 <BackgroundColor>White</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -2966,9 +2931,10 @@
     <ReportParameter Name="paylist">
       <DataType>String</DataType>
       <DefaultValue>
-        <Values>
-          <Value>BACSRUN</Value>
-        </Values>
+        <DataSetReference>
+          <DataSetName>Paylist</DataSetName>
+          <ValueField>PAYLIST</ValueField>
+        </DataSetReference>
       </DefaultValue>
       <Prompt>Please select a Paylist</Prompt>
       <ValidValues>

@@ -1504,8 +1504,8 @@ FROM            X_RPT_REPORTINGLIST AS R1 INNER JOIN
                   </TablixMembers>
                 </TablixRowHierarchy>
                 <DataSetName>dsGetReportList</DataSetName>
-                <Top>0.12931cm</Top>
-                <Left>12.74892cm</Left>
+                <Top>0.12087cm</Top>
+                <Left>12.74011cm</Left>
                 <Height>15.15cm</Height>
                 <Width>6.15422cm</Width>
                 <Style>
@@ -4293,42 +4293,6 @@ FROM            X_RPT_REPORTINGLIST AS R1 INNER JOIN
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Version 6 Build 003.9</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>6pt</FontSize>
-                        <Color>Navy</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.84659cm</Top>
-              <Left>14.23856cm</Left>
-              <Height>0.52908cm</Height>
-              <Width>5.15001cm</Width>
-              <ZIndex>3</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="txtFooter_PrintBy">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -4371,7 +4335,7 @@ FROM            X_RPT_REPORTINGLIST AS R1 INNER JOIN
               <Left>0.39501cm</Left>
               <Height>0.52908cm</Height>
               <Width>6.27991cm</Width>
-              <ZIndex>4</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <PaddingLeft>2pt</PaddingLeft>
                 <PaddingRight>2pt</PaddingRight>
@@ -4384,7 +4348,7 @@ FROM            X_RPT_REPORTINGLIST AS R1 INNER JOIN
               <Left>0.39501cm</Left>
               <Height>0cm</Height>
               <Width>18.99356cm</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Color>#3c3092</Color>

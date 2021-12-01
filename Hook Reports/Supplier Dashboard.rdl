@@ -240,7 +240,7 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>8.28755cm</Height>
+                  <Height>8.32283cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -1151,7 +1151,7 @@
             </Filters>
             <Top>3.73972cm</Top>
             <Left>0.30954cm</Left>
-            <Height>10.96593cm</Height>
+            <Height>11.00121cm</Height>
             <Width>15.58209cm</Width>
             <Style>
               <Border>
@@ -2005,42 +2005,6 @@
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Version 6 Build 003.9</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>6pt</FontSize>
-                        <Color>Navy</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.26172cm</Top>
-              <Left>13.6456cm</Left>
-              <Height>0.6cm</Height>
-              <Width>2.56353cm</Width>
-              <ZIndex>5</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
           </ReportItems>
           <Style />
         </PageFooter>

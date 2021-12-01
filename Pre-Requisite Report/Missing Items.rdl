@@ -2900,47 +2900,12 @@ order by ml.LEDGER, ma.ACCOUNT,mu.TITLE</CommandText>
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="PageNumber2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Version 6 Build 003.9</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>6pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>PageNumber</rd:DefaultName>
-              <Top>0.62899cm</Top>
-              <Left>21.9499cm</Left>
-              <Height>0.6cm</Height>
-              <Width>3.18575cm</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>4pt</PaddingLeft>
-                <PaddingRight>4pt</PaddingRight>
-                <PaddingTop>4pt</PaddingTop>
-                <PaddingBottom>4pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Line Name="Line1">
               <Top>0.02088cm</Top>
               <Left>0.57158cm</Left>
               <Height>0cm</Height>
               <Width>24.617cm</Width>
-              <ZIndex>2</ZIndex>
+              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>

@@ -3402,41 +3402,6 @@ WHERE        (M_ACCOUNT.LEDGER = 'ACADEMY') AND (M_ACCOUNT.ACCOUNT = (SELECT LEF
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="PageNumber2">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Version 6 Build 003.9</Value>
-                      <Style>
-                        <FontFamily>CALIBRI</FontFamily>
-                        <FontSize>6pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>PageNumber</rd:DefaultName>
-              <Top>2.61278cm</Top>
-              <Left>15.25466cm</Left>
-              <Height>0.6cm</Height>
-              <Width>3.10446cm</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>4pt</PaddingLeft>
-                <PaddingRight>4pt</PaddingRight>
-                <PaddingTop>4pt</PaddingTop>
-                <PaddingBottom>4pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="Textbox78">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -3459,7 +3424,7 @@ WHERE        (M_ACCOUNT.LEDGER = 'ACADEMY') AND (M_ACCOUNT.ACCOUNT = (SELECT LEF
               <Left>0.02848cm</Left>
               <Height>1.13543cm</Height>
               <Width>18.33065cm</Width>
-              <ZIndex>2</ZIndex>
+              <ZIndex>1</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3502,7 +3467,7 @@ WHERE        (M_ACCOUNT.LEDGER = 'ACADEMY') AND (M_ACCOUNT.ACCOUNT = (SELECT LEF
               <Left>0.02848cm</Left>
               <Height>0.52049cm</Height>
               <Width>18.33065cm</Width>
-              <ZIndex>3</ZIndex>
+              <ZIndex>2</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3518,7 +3483,7 @@ WHERE        (M_ACCOUNT.LEDGER = 'ACADEMY') AND (M_ACCOUNT.ACCOUNT = (SELECT LEF
               <Left>0.05718cm</Left>
               <Height>0cm</Height>
               <Width>18.30195cm</Width>
-              <ZIndex>4</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
