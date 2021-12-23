@@ -3113,7 +3113,7 @@
             </Textbox>
             <Line Name="Line2">
               <Top>2.37602cm</Top>
-              <Left>0.05776cm</Left>
+              <Left>0.0345cm</Left>
               <Height>0cm</Height>
               <Width>25.41041cm</Width>
               <ZIndex>1</ZIndex>
@@ -3603,41 +3603,6 @@
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="Textbox10">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Version 6 Build 003.9</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>6pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.92467cm</Top>
-              <Left>23.06065cm</Left>
-              <Height>0.6cm</Height>
-              <Width>2.40753cm</Width>
-              <ZIndex>5</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="txtFooter_PrintBy">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -3678,7 +3643,7 @@
               <Left>0.05776cm</Left>
               <Height>0.63492cm</Height>
               <Width>7.62372cm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <BackgroundColor>White</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>

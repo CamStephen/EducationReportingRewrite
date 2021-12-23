@@ -244,41 +244,6 @@
               </Border>
             </Style>
           </Tablix>
-          <Textbox Name="Textbox1">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Version 6 Build 003.9</Value>
-                    <Style>
-                      <FontFamily>Calibri</FontFamily>
-                      <FontSize>6pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Right</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>2.62778cm</Top>
-            <Left>2.11561cm</Left>
-            <Height>0.6cm</Height>
-            <Width>7.09127cm</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox20">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -313,7 +278,7 @@
             <Left>6.74814cm</Left>
             <Height>0.56967cm</Height>
             <Width>2.45874cm</Width>
-            <ZIndex>2</ZIndex>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>

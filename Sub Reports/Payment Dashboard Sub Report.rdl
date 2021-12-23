@@ -1445,7 +1445,7 @@
             <FixedRowHeaders>true</FixedRowHeaders>
             <NoRowsMessage>No transactions to display</NoRowsMessage>
             <DataSetName>dsGetPaymentDashboardDetails</DataSetName>
-            <Left>0.0611cm</Left>
+            <Left>0.09285cm</Left>
             <Height>1.73333cm</Height>
             <Width>27.67115cm</Width>
             <Style>
@@ -1456,7 +1456,7 @@
         <Height>1.7887cm</Height>
         <Style />
       </Body>
-      <Width>28.43604cm</Width>
+      <Width>28.46779cm</Width>
       <Page>
         <PageHeader>
           <Height>3.69604cm</Height>
@@ -1504,7 +1504,7 @@ Parameters!VIEW.Value = "4","Payments made between 61 - 90 Days")</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.91776cm</Top>
-              <Left>0.10954cm</Left>
+              <Left>0.14129cm</Left>
               <Height>1.31479cm</Height>
               <Width>21.1148cm</Width>
               <Style>
@@ -1517,7 +1517,7 @@ Parameters!VIEW.Value = "4","Payments made between 61 - 90 Days")</Value>
             </Textbox>
             <Line Name="Line2">
               <Top>2.26783cm</Top>
-              <Left>0.07779cm</Left>
+              <Left>0.10954cm</Left>
               <Height>0cm</Height>
               <Width>28.3265cm</Width>
               <ZIndex>1</ZIndex>
@@ -1711,7 +1711,7 @@ Parameters!VIEW.Value = "4","Payments made between 61 - 90 Days")</Value>
               </Paragraphs>
               <rd:DefaultName>Textbox60</rd:DefaultName>
               <Top>2.47949cm</Top>
-              <Left>0.07779cm</Left>
+              <Left>0.10954cm</Left>
               <Height>1.15562cm</Height>
               <Width>21.14655cm</Width>
               <ZIndex>2</ZIndex>
@@ -1755,7 +1755,7 @@ Parameters!VIEW.Value = "4","Payments made between 61 - 90 Days")</Value>
                 </Actions>
               </ActionInfo>
               <Top>2.47949cm</Top>
-              <Left>25.71272cm</Left>
+              <Left>25.74447cm</Left>
               <Height>0.56967cm</Height>
               <Width>2.61749cm</Width>
               <ZIndex>3</ZIndex>
@@ -1809,7 +1809,7 @@ Parameters!VIEW.Value = "4","Payments made between 61 - 90 Days")</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>0.26172cm</Top>
-              <Left>0.0611cm</Left>
+              <Left>0.09285cm</Left>
               <Height>0.63492cm</Height>
               <Width>9.66932cm</Width>
               <Style>
@@ -1839,7 +1839,7 @@ Parameters!VIEW.Value = "4","Payments made between 61 - 90 Days")</Value>
                 </Paragraph>
               </Paragraphs>
               <Top>1.00247cm</Top>
-              <Left>0.01603cm</Left>
+              <Left>0.04778cm</Left>
               <Height>0.63492cm</Height>
               <Width>0.6cm</Width>
               <ZIndex>1</ZIndex>
@@ -1879,7 +1879,7 @@ Parameters!VIEW.Value = "4","Payments made between 61 - 90 Days")</Value>
                 </Actions>
               </ActionInfo>
               <Top>1.00247cm</Top>
-              <Left>0.62949cm</Left>
+              <Left>0.66124cm</Left>
               <Height>0.63492cm</Height>
               <Width>3.61864cm</Width>
               <ZIndex>2</ZIndex>
@@ -1910,7 +1910,7 @@ Parameters!VIEW.Value = "4","Payments made between 61 - 90 Days")</Value>
               <Value>="/images/PoweredByPSF.jpg"</Value>
               <Sizing>FitProportional</Sizing>
               <Top>0.12555cm</Top>
-              <Left>11.37084cm</Left>
+              <Left>11.40259cm</Left>
               <Height>1.51183cm</Height>
               <Width>5.80363cm</Width>
               <ZIndex>4</ZIndex>
@@ -1920,42 +1920,6 @@ Parameters!VIEW.Value = "4","Payments made between 61 - 90 Days")</Value>
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Version 6 Build 003.9</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>6pt</FontSize>
-                        <Color>Navy</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.29664cm</Top>
-              <Left>23.26535cm</Left>
-              <Height>0.6cm</Height>
-              <Width>5.06486cm</Width>
-              <ZIndex>5</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
           </ReportItems>
           <Style />
         </PageFooter>

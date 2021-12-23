@@ -3,7 +3,7 @@
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="dsInitialSQLConnection">
-      <DataSourceReference>/Data Sources/dsLiveReports</DataSourceReference>
+      <DataSourceReference>dsLiveReports</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>7badc41b-673c-4d41-9146-a004eed71545</rd:DataSourceID>
     </DataSource>

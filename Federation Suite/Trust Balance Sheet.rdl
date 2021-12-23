@@ -3641,47 +3641,12 @@ FIELDS!MAINGROUP.Value =4, "Current Year Income &amp; Expenditure")</Value>
                 </Border>
               </Style>
             </Image>
-            <Textbox Name="Textbox1">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Version 6 Build 003.9</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>7pt</FontSize>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>1.15877cm</Top>
-              <Left>22.93554cm</Left>
-              <Height>0.6cm</Height>
-              <Width>3.54729cm</Width>
-              <ZIndex>4</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Line Name="Line1">
               <Top>0.07056cm</Top>
               <Left>0.16662cm</Left>
               <Height>0cm</Height>
               <Width>26.31621cm</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
@@ -3728,7 +3693,7 @@ FIELDS!MAINGROUP.Value =4, "Current Year Income &amp; Expenditure")</Value>
               <Left>0.16662cm</Left>
               <Height>0.63492cm</Height>
               <Width>7.62372cm</Width>
-              <ZIndex>6</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <BackgroundColor>White</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>

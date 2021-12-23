@@ -8492,12 +8492,12 @@ select '0' [BenchmarkID], 'None' [Benchmark]</CommandText>
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>15.18672cm</Width>
+                  <Width>15.25727cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>6.905cm</Height>
+                  <Height>6.98037cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -8894,6 +8894,8 @@ select '0' [BenchmarkID], 'None' [Benchmark]</CommandText>
                                 </Style>
                               </ChartNoDataMessage>
                               <DataSetName>dsGetKPIDetails</DataSetName>
+                              <Top>0.07537cm</Top>
+                              <Left>0.07055cm</Left>
                               <Height>6.905cm</Height>
                               <Width>15.18672cm</Width>
                               <Style>
@@ -14578,8 +14580,8 @@ select '0' [BenchmarkID], 'None' [Benchmark]</CommandText>
             <DataSetName>dsGetKPIDetails</DataSetName>
             <Top>0.10102cm</Top>
             <Left>15.62452cm</Left>
-            <Height>96.9875cm</Height>
-            <Width>15.18672cm</Width>
+            <Height>97.06287cm</Height>
+            <Width>15.25727cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -16276,42 +16278,6 @@ select '0' [BenchmarkID], 'None' [Benchmark]</CommandText>
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Textbox3">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>Bespoke Version 6 Build 003.9</Value>
-                      <Style>
-                        <FontFamily>Calibri</FontFamily>
-                        <FontSize>6pt</FontSize>
-                        <Color>#3c3092</Color>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Right</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.9561cm</Top>
-              <Left>27.64012cm</Left>
-              <Height>0.6cm</Height>
-              <Width>3.04082cm</Width>
-              <ZIndex>4</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
             <Textbox Name="txtFooter_PageNumber">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -16336,7 +16302,7 @@ select '0' [BenchmarkID], 'None' [Benchmark]</CommandText>
               <Left>28.24866cm</Left>
               <Height>0.63492cm</Height>
               <Width>2.43228cm</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <BackgroundColor>White</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
