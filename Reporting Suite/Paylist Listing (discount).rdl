@@ -36,6 +36,10 @@
           <QueryParameter Name="@Paydoc">
             <Value>=Parameters!Paydoc.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="@YEARCODE">
+            <Value>=Parameters!YEARCODE.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
         <CommandText>PSF_RPT_EDU_GET_PAYLIST_LISTING_WITH_DISCOUNT</CommandText>
@@ -272,6 +276,19 @@
         <Field Name="YEAR_PERIOD">
           <DataField>YEAR_PERIOD</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="DsGetYearcode">
+      <Query>
+        <DataSourceName>dsselectedDatabase</DataSourceName>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>PSF_RPT_EDU_GET_YEARCODES</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="YEARCODE">
+          <DataField>YEARCODE</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
         </Field>
       </Fields>
     </DataSet>
@@ -2678,9 +2695,31 @@ IIF(Fields!DUEDATE.Value = nothing,"Discount applied but no due date specified",
                       </Style>
                     </TextRun>
                     <TextRun>
-                      <Value xml:space="preserve"> </Value>
+                      <Value> ; </Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>Year</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>8pt</FontSize>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Value>-</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                      </Style>
+                    </TextRun>
+                    <TextRun>
+                      <Label>Year</Label>
+                      <Value>=First(Fields!YEARCODE.Value, "DsGetYearcode")</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>8pt</FontSize>
+                        <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
                   </TextRuns>
@@ -3291,6 +3330,23 @@ IIF(Fields!DUEDATE.Value = nothing,"Discount applied but no due date specified",
       <Prompt>YEARPERIOD</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
+    <ReportParameter Name="YEARCODE">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsGetCurrentPeriod</DataSetName>
+          <ValueField>PERIOD</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Please select the Year</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DsGetYearcode</DataSetName>
+          <ValueField>YEARCODE</ValueField>
+          <LabelField>YEARCODE</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -3361,6 +3417,11 @@ IIF(Fields!DUEDATE.Value = nothing,"Discount applied but no due date specified",
           <ColumnIndex>0</ColumnIndex>
           <RowIndex>3</RowIndex>
           <ParameterName>YEARPERIOD</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>3</RowIndex>
+          <ParameterName>YEARCODE</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

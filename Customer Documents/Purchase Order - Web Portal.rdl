@@ -458,7 +458,17 @@ WHERE        (M_ACCOUNT.LEDGER = 'ACADEMY') AND (M_ACCOUNT.ACCOUNT = 'COMPANY')<
             <Value>=Parameters!DOCUMENT_ID.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandText>SELECT     dbo.M_NAMEACCOUNT.LEDGER, dbo.M_NAMEACCOUNT.ACCOUNT, dbo.M_ACCOUNT.TITLE, dbo.M_NAMEACCOUNT.ADDRESSNAME, 
+        <CommandText>Declare
+
+@LOC varchar(12)
+
+
+Set @LOC = Case when (	Select USERFIELD_VALUE from D_ACCOUNTUSERFIELDS
+						Where Userfield_ID = (Select ID from M_USERFIELDS where Title = 'Use Company Address on PO')
+						and ACCOUNT_ID = (Select ID from M_ACCOUNT where ledger = 'ACADEMY' and Account = 'COMPANY')) = 'Yes' then 'COMPANY'
+						else (SELECT LEFT(NOMINAL,3) FROM MP_DOCUMENT WHERE MP_DOCUMENT.ID = @DOCUMENT_ID) end
+
+SELECT     dbo.M_NAMEACCOUNT.LEDGER, dbo.M_NAMEACCOUNT.ACCOUNT, dbo.M_ACCOUNT.TITLE, dbo.M_NAMEACCOUNT.ADDRESSNAME, 
                       dbo.M_NAMEACCOUNT.ADDRESS1, dbo.M_NAMEACCOUNT.ADDRESS2, dbo.M_NAMEACCOUNT.ADDRESS3, dbo.M_NAMEACCOUNT.POSTTOWN, 
                       dbo.M_NAMEACCOUNT.COUNTY, dbo.M_NAMEACCOUNT.POSTCODE1, dbo.M_NAMEACCOUNT.POSTCODE2, dbo.M_NAMEACCOUNT.COUNTRY, 
                       dbo.M_NAMEACCOUNT.TELEPHONE, dbo.M_NAMEACCOUNT.FAXNO, dbo.M_NAMEACCOUNT.TAXNUMBER, dbo.M_NAMEACCOUNT.CONTACT, 
@@ -470,7 +480,7 @@ FROM         dbo.M_ACCOUNT INNER JOIN
                       dbo.M_ACCOUNT.ACCOUNT = dbo.M_NAMEACCOUNT.ACCOUNT LEFT OUTER JOIN
                       dbo.D_ACCTKEYS ON dbo.M_NAMEACCOUNT.LEDGER = dbo.D_ACCTKEYS.LEDGER AND dbo.M_NAMEACCOUNT.ACCOUNT = dbo.D_ACCTKEYS.ACCOUNT AND 
                       dbo.D_ACCTKEYS.KEYNAME = 'POSIGPRINT'
-WHERE        (M_ACCOUNT.LEDGER = 'ACADEMY') AND (M_ACCOUNT.ACCOUNT = (SELECT LEFT(NOMINAL,3) FROM MP_DOCUMENT WHERE MP_DOCUMENT.ID = @DOCUMENT_ID))</CommandText>
+WHERE        (M_ACCOUNT.LEDGER = 'ACADEMY') AND (M_ACCOUNT.ACCOUNT = @LOC)</CommandText>
       </Query>
       <Fields>
         <Field Name="LEDGER">

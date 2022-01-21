@@ -1,7 +1,17 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Reporting Suite",
+    "\\Reporting Suite\\bin",
+    "\\Reporting Suite\\bin\\Release",
+    "\\Sub Reports",
+    "\\Sub Reports\\bin",
+    "\\Sub Reports\\bin\\Release",
+    "\\Trust Suite",
+    "\\Trust Suite\\Sub Reports",
+    "\\Trust Suite\\Sub Reports\\bin",
+    "\\Trust Suite\\Sub Reports\\bin\\Release"
   ],
-  "SelectedNode": "\\Education Suite Version 6.sln",
+  "SelectedNode": "\\Reporting Suite\\bin\\Release\\Management Accounts by Cost Centre.rdl",
   "PreviewInSolutionExplorer": false
 }

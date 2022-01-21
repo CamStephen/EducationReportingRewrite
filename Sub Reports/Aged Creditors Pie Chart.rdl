@@ -123,7 +123,9 @@
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Debt_Age">
-          <Value>=datediff("d" ,cdate(Fields!DOCDATE.Value),cdate(Parameters!DATE.Value))</Value>
+          <Value>=datediff("d" ,
+iif(Parameters!AGEBY.Value = 1, cdate(Fields!DOCDATE.Value),cdate(Fields!DUEDATE.Value))
+,cdate(Parameters!DATE.Value))</Value>
         </Field>
         <Field Name="Age030">
           <Value>=cdec(iif(Fields!Debt_Age.Value&lt;=30,Fields!VALUE.Value,0))</Value>
@@ -146,6 +148,10 @@ Fields!Debt_Age.Value&gt;=31 ANDALSO Fields!Debt_Age.Value&lt;=60,"31-60 DAYS",
 Fields!Debt_Age.Value&gt;=61 ANDALSO Fields!Debt_Age.Value&lt;=90,"61-90 DAYS",
 Fields!Debt_Age.Value&gt;=91 ANDALSO Fields!Debt_Age.Value&lt;=120,"91-120 DAYS",
 Fields!Debt_Age.Value&gt;=121,"OLDER")</Value>
+        </Field>
+        <Field Name="DUEDATE">
+          <DataField>DUEDATE</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
         </Field>
       </Fields>
     </DataSet>
@@ -595,6 +601,27 @@ Fields!Debt_Age.Value&gt;=121,"OLDER")</Value>
       <Prompt>Layout</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
+    <ReportParameter Name="AGEBY">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Age by</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>1</Value>
+            <Label>DocDate</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>2</Value>
+            <Label>DueDate</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -650,6 +677,11 @@ Fields!Debt_Age.Value&gt;=121,"OLDER")</Value>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>1</RowIndex>
           <ParameterName>Layout</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>AGEBY</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

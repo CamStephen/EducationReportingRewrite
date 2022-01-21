@@ -110,6 +110,76 @@
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="dsYearPeriod">
+      <Query>
+        <DataSourceName>dsselectedDatabase</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@COMPANYCODE">
+            <Value>=Parameters!COMPANYCODE.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>PSF_RPT_EDU_GET_YEARCODE_AND_PERIODS</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="YEAR_PERIOD">
+          <DataField>YEAR_PERIOD</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="YEARCODE">
+          <DataField>YEARCODE</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="PERIOD">
+          <DataField>PERIOD</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="TITLE">
+          <DataField>TITLE</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="PERIODEND">
+          <DataField>PERIODEND</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="COMPANYCODE">
+          <DataField>COMPANYCODE</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+      </Fields>
+    </DataSet>
+    <DataSet Name="dsGetCurrentPeriod">
+      <Query>
+        <DataSourceName>dsselectedDatabase</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@COMPANYCODE">
+            <Value>=Parameters!COMPANYCODE.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>PSF_RPT_EDU_GET_CURRENT_YEARCODE_AND_PERIOD</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="YEARCODE">
+          <DataField>YEARCODE</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="PERIOD">
+          <DataField>PERIOD</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="TITLE">
+          <DataField>TITLE</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+        <Field Name="YEAR_PERIOD">
+          <DataField>YEAR_PERIOD</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
+        </Field>
+      </Fields>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -1454,6 +1524,28 @@
       <Prompt>ReportParameter1</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
+    <ReportParameter Name="PERIODFROM">
+      <DataType>String</DataType>
+      <Prompt>Please Select Starting Period</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsYearPeriod</DataSetName>
+          <ValueField>YEAR_PERIOD</ValueField>
+          <LabelField>YEAR_PERIOD</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
+    <ReportParameter Name="PERIODTO">
+      <DataType>String</DataType>
+      <Prompt>Please select the Period to</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>dsYearPeriod</DataSetName>
+          <ValueField>YEAR_PERIOD</ValueField>
+          <LabelField>YEAR_PERIOD</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -1494,6 +1586,16 @@
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>1</RowIndex>
           <ParameterName>ACCOUNT</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>PERIODFROM</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>3</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>PERIODTO</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

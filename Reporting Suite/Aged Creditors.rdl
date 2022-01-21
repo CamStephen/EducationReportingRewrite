@@ -114,7 +114,9 @@
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Debt_Age">
-          <Value>=datediff("d" ,cdate(Fields!DOCDATE.Value),cdate(Parameters!DATE.Value))</Value>
+          <Value>=datediff("d" ,
+iif(Parameters!AGEBY.Value = 1, cdate(Fields!DOCDATE.Value),cdate(Fields!DUEDATE.Value))
+,cdate(Parameters!DATE.Value))</Value>
         </Field>
         <Field Name="COMMTEXT">
           <DataField>COMMTEXT</DataField>
@@ -138,6 +140,10 @@
         </Field>
         <Field Name="AgeOlder">
           <Value>=cdec(Fields!VALUE.Value-Fields!Age030.Value-Fields!Age3160.Value-Fields!Age6190.Value-Fields!Age91120.Value)</Value>
+        </Field>
+        <Field Name="DUEDATE">
+          <DataField>DUEDATE</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
         </Field>
       </Fields>
     </DataSet>
@@ -5192,6 +5198,27 @@
         </ParameterValues>
       </ValidValues>
     </ReportParameter>
+    <ReportParameter Name="AGEBY">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Age by</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>1</Value>
+            <Label>DocDate</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>2</Value>
+            <Label>DueDate</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -5277,6 +5304,11 @@
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>4</RowIndex>
           <ParameterName>GROUPING</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>4</RowIndex>
+          <ParameterName>AGEBY</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

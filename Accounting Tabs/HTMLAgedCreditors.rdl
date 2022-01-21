@@ -36,6 +36,10 @@
           <QueryParameter Name="@LOCATION">
             <Value>=Parameters!LOCATION.Value</Value>
           </QueryParameter>
+          <QueryParameter Name="@DOMAINNAME">
+            <Value>=Parameters!PSF_USERID.Value</Value>
+            <rd:UserDefined>true</rd:UserDefined>
+          </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
         <CommandText>PSF_RPT_EDU_GET_AGED_CREDITORS</CommandText>
@@ -127,7 +131,9 @@
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Debt_Age">
-          <Value>=datediff("d" ,cdate(Fields!DOCDATE.Value),cdate(Parameters!DATE.Value))</Value>
+          <Value>=datediff("d" ,
+iif(Parameters!AGEBY.Value = 1, cdate(Fields!DOCDATE.Value),cdate(Fields!DUEDATE.Value))
+,cdate(Parameters!DATE.Value))</Value>
         </Field>
         <Field Name="Age030">
           <Value>=cdec(iif(Fields!Debt_Age.Value&lt;=30,Fields!VALUE.Value,0))</Value>
@@ -159,6 +165,10 @@
         <Field Name="CONTACT">
           <DataField>CONTACT</DataField>
           <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DUEDATE">
+          <DataField>DUEDATE</DataField>
+          <rd:UserDefined>true</rd:UserDefined>
         </Field>
       </Fields>
     </DataSet>
@@ -2234,6 +2244,27 @@
       <Prompt>ReportParameter1</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
+    <ReportParameter Name="AGEBY">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>1</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Age by</Prompt>
+      <ValidValues>
+        <ParameterValues>
+          <ParameterValue>
+            <Value>1</Value>
+            <Label>DocDate</Label>
+          </ParameterValue>
+          <ParameterValue>
+            <Value>2</Value>
+            <Label>DueDate</Label>
+          </ParameterValue>
+        </ParameterValues>
+      </ValidValues>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -2309,6 +2340,11 @@
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>3</RowIndex>
           <ParameterName>ACCOUNT</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>3</RowIndex>
+          <ParameterName>AGEBY</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

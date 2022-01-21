@@ -979,11 +979,12 @@ Parameters!COMMITMENTS.Value = "ALL", Fields!STATUS.Value
                                               <Paragraph>
                                                 <TextRuns>
                                                   <TextRun>
-                                                    <Value>=(sum(Fields!Trend_Value.Value) + sum(Fields!COMMITMENTS.Value)) - Sum(Fields!BUDGET.Value)</Value>
+                                                    <Value>=Sum(Fields!BUDGET.Value)-(sum(Fields!Trend_Value.Value) + sum(Fields!COMMITMENTS.Value))</Value>
                                                     <Style>
                                                       <FontFamily>Calibri</FontFamily>
                                                       <FontSize>8pt</FontSize>
                                                       <Format>#,0.00;(#,0.00);'-'</Format>
+                                                      <Color>=iif(Sum(Fields!BUDGET.Value)-(sum(Fields!Trend_Value.Value) + sum(Fields!COMMITMENTS.Value)) &gt; 0 ,"Black","Red")</Color>
                                                     </Style>
                                                   </TextRun>
                                                 </TextRuns>
