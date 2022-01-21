@@ -62,14 +62,6 @@
           <QueryParameter Name="@LEDGER">
             <Value>=JOIN(Parameters!LEDGER.Value,",")</Value>
           </QueryParameter>
-          <QueryParameter Name="@SearchSupplier">
-            <Value>=Parameters!SearchSupplier.Value</Value>
-            <rd:UserDefined>true</rd:UserDefined>
-          </QueryParameter>
-          <QueryParameter Name="@SUPPLIER">
-            <Value>=JOIN(Parameters!SUPPLIER.Value,",")</Value>
-            <rd:UserDefined>true</rd:UserDefined>
-          </QueryParameter>
           <QueryParameter Name="@SearchValue">
             <Value>=Parameters!SearchValue.Value</Value>
           </QueryParameter>
@@ -77,11 +69,66 @@
             <Value>=Parameters!VALUE.Value</Value>
           </QueryParameter>
         </QueryParameters>
-        <CommandType>StoredProcedure</CommandType>
-        <CommandText>PSF_RPT_EDU_GET_PURCHASING_DOCUMENTS</CommandText>
+        <CommandText>exec PSF_RPT_EDU_GET_PURCHASING_DOCUMENTS @DOMAINNAME,@COMPANYCODE,@LOCATION,@DOCTYPE,@STATUS,@DATEFROM,@DATETO,@SearchNominal,@CORENOMINAL,@SearchAccount,@ACCOUNT,@SearchLedger,@LEDGER,@SearchValue,@VALUE</CommandText>
         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
       </Query>
       <Fields>
+        <Field Name="DOCUMENT">
+          <DataField>DOCUMENT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="DOC_ID">
+          <DataField>DOC_ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="DOCDATE">
+          <DataField>DOCDATE</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="QUANTITY">
+          <DataField>QUANTITY</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="PRICEPERBATCH">
+          <DataField>PRICEPERBATCH</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TOTALCOST">
+          <DataField>TOTALCOST</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="INPUTDATE">
+          <DataField>INPUTDATE</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="DESCRIPTION">
+          <DataField>DESCRIPTION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SUPPLIER">
+          <DataField>SUPPLIER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LOCATION">
+          <DataField>LOCATION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NOMINAL">
+          <DataField>NOMINAL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ACCOUNT">
+          <DataField>ACCOUNT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="LEDGER">
+          <DataField>LEDGER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="STATUS">
+          <DataField>STATUS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="DOCTYPE">
           <DataField>DOCTYPE</DataField>
           <rd:UserDefined>true</rd:UserDefined>
@@ -3844,6 +3891,41 @@ Parameters!Grouping2.Value = "8", Fields!SUPPLIER.Value)</Value>
                 </Border>
               </Style>
             </Image>
+            <Textbox Name="Textbox14">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Version 6 Build 003.9</Value>
+                      <Style>
+                        <FontFamily>Calibri</FontFamily>
+                        <FontSize>6pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox1</rd:DefaultName>
+              <Top>0.99908cm</Top>
+              <Left>26.77651cm</Left>
+              <Height>0.6cm</Height>
+              <Width>2.5cm</Width>
+              <ZIndex>5</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
             <Textbox Name="txtFooter_PrintBy">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -3883,7 +3965,7 @@ Parameters!Grouping2.Value = "8", Fields!SUPPLIER.Value)</Value>
               <Top>0.22515cm</Top>
               <Height>0.63492cm</Height>
               <Width>7.62372cm</Width>
-              <ZIndex>5</ZIndex>
+              <ZIndex>6</ZIndex>
               <Style>
                 <BackgroundColor>White</BackgroundColor>
                 <PaddingLeft>2pt</PaddingLeft>
@@ -4147,7 +4229,7 @@ Parameters!Grouping2.Value = "8", Fields!SUPPLIER.Value)</Value>
           <Value>0</Value>
         </Values>
       </DefaultValue>
-      <Prompt>Search by Supplier?</Prompt>
+      <Prompt>Search by Supplier</Prompt>
       <ValidValues>
         <ParameterValues>
           <ParameterValue>
