@@ -421,17 +421,12 @@ WHERE        (M_ACCOUNT.LEDGER = 'ACADEMY') AND (M_ACCOUNT.ACCOUNT = 'COMPANY')<
     <DataSet Name="AcademyAddress">
       <Query>
         <DataSourceName>dsInitialSQLConnection</DataSourceName>
-        <CommandText>Declare
-
-@LOC varchar(12)
-
-
-Set @LOC = Case when (	Select USERFIELD_VALUE from D_ACCOUNTUSERFIELDS
-						Where Userfield_ID = (Select ID from M_USERFIELDS where Title = 'Use Company Address on PO')
-						and ACCOUNT_ID = (Select ID from M_ACCOUNT where ledger = 'ACADEMY' and Account = 'COMPANY')) = 'Yes' then 'COMPANY'
-						else (SELECT LEFT(NOMINAL,3) FROM MP_DOCUMENT WHERE MP_DOCUMENT.ID = @DOCUMENT_ID) end
-
-SELECT     dbo.M_NAMEACCOUNT.LEDGER, dbo.M_NAMEACCOUNT.ACCOUNT, dbo.M_ACCOUNT.TITLE, dbo.M_NAMEACCOUNT.ADDRESSNAME, 
+        <QueryParameters>
+          <QueryParameter Name="@DOCUMENT_ID">
+            <Value>=Parameters!DOCUMENT_ID.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>SELECT     dbo.M_NAMEACCOUNT.LEDGER, dbo.M_NAMEACCOUNT.ACCOUNT, dbo.M_ACCOUNT.TITLE, dbo.M_NAMEACCOUNT.ADDRESSNAME, 
                       dbo.M_NAMEACCOUNT.ADDRESS1, dbo.M_NAMEACCOUNT.ADDRESS2, dbo.M_NAMEACCOUNT.ADDRESS3, dbo.M_NAMEACCOUNT.POSTTOWN, 
                       dbo.M_NAMEACCOUNT.COUNTY, dbo.M_NAMEACCOUNT.POSTCODE1, dbo.M_NAMEACCOUNT.POSTCODE2, dbo.M_NAMEACCOUNT.COUNTRY, 
                       dbo.M_NAMEACCOUNT.TELEPHONE, dbo.M_NAMEACCOUNT.FAXNO, dbo.M_NAMEACCOUNT.TAXNUMBER, dbo.M_NAMEACCOUNT.CONTACT, 
@@ -443,8 +438,114 @@ FROM         dbo.M_ACCOUNT INNER JOIN
                       dbo.M_ACCOUNT.ACCOUNT = dbo.M_NAMEACCOUNT.ACCOUNT LEFT OUTER JOIN
                       dbo.D_ACCTKEYS ON dbo.M_NAMEACCOUNT.LEDGER = dbo.D_ACCTKEYS.LEDGER AND dbo.M_NAMEACCOUNT.ACCOUNT = dbo.D_ACCTKEYS.ACCOUNT AND 
                       dbo.D_ACCTKEYS.KEYNAME = 'POSIGPRINT'
-WHERE        (M_ACCOUNT.LEDGER = 'ACADEMY') AND (M_ACCOUNT.ACCOUNT = @LOC)</CommandText>
+WHERE        (M_ACCOUNT.LEDGER = 'ACADEMY') AND (M_ACCOUNT.ACCOUNT = (SELECT LEFT(NOMINAL,3) FROM MP_DOCUMENT WHERE MP_DOCUMENT.ID = @DOCUMENT_ID))</CommandText>
       </Query>
+      <Fields>
+        <Field Name="LEDGER">
+          <DataField>LEDGER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ACCOUNT">
+          <DataField>ACCOUNT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TITLE">
+          <DataField>TITLE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ADDRESSNAME">
+          <DataField>ADDRESSNAME</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ADDRESS1">
+          <DataField>ADDRESS1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ADDRESS2">
+          <DataField>ADDRESS2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ADDRESS3">
+          <DataField>ADDRESS3</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="POSTTOWN">
+          <DataField>POSTTOWN</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="COUNTY">
+          <DataField>COUNTY</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="POSTCODE1">
+          <DataField>POSTCODE1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="POSTCODE2">
+          <DataField>POSTCODE2</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="COUNTRY">
+          <DataField>COUNTRY</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TELEPHONE">
+          <DataField>TELEPHONE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FAXNO">
+          <DataField>FAXNO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TAXNUMBER">
+          <DataField>TAXNUMBER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RSCOMMENT">
+          <DataField>RSCOMMENT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CONTACT">
+          <DataField>CONTACT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FACTORLEDGER">
+          <DataField>FACTORLEDGER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SALUTATION">
+          <DataField>SALUTATION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EMAIL_ADDRESS">
+          <DataField>EMAIL_ADDRESS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FACTORACCOUNT">
+          <DataField>FACTORACCOUNT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CREDITLIMIT">
+          <DataField>CREDITLIMIT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="TAXCTRYCODE">
+          <DataField>TAXCTRYCODE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ADDRESSFORMAT">
+          <DataField>ADDRESSFORMAT</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TURNOVERLIMIT">
+          <DataField>TURNOVERLIMIT</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="KEYVALUE">
+          <DataField>KEYVALUE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
     </DataSet>
     <DataSet Name="SupplierDetails">
       <Query>
@@ -2681,8 +2782,8 @@ WHERE        (M_ACCOUNT.LEDGER = 'PURCHASE') AND (M_ACCOUNT.ACCOUNT =
                     </Paragraph>
                   </Paragraphs>
                   <rd:DefaultName>Textbox71</rd:DefaultName>
-                  <Top>1.65888cm</Top>
-                  <Left>0.08984cm</Left>
+                  <Top>1.6236cm</Top>
+                  <Left>0.05456cm</Left>
                   <Height>0.52944cm</Height>
                   <Width>3.16671cm</Width>
                   <ZIndex>2</ZIndex>
@@ -3144,6 +3245,41 @@ WHERE        (M_ACCOUNT.LEDGER = 'PURCHASE') AND (M_ACCOUNT.ACCOUNT =
                 </Border>
               </Style>
             </Image>
+            <Textbox Name="PageNumber2">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>Version 6 Build 003.9</Value>
+                      <Style>
+                        <FontFamily>CALIBRI</FontFamily>
+                        <FontSize>6pt</FontSize>
+                      </Style>
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>PageNumber</rd:DefaultName>
+              <Top>2.55493cm</Top>
+              <Left>15.76032cm</Left>
+              <Height>0.6cm</Height>
+              <Width>2.68865cm</Width>
+              <ZIndex>2</ZIndex>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>4pt</PaddingLeft>
+                <PaddingRight>4pt</PaddingRight>
+                <PaddingTop>4pt</PaddingTop>
+                <PaddingBottom>4pt</PaddingBottom>
+              </Style>
+            </Textbox>
             <Textbox Name="Textbox78">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
@@ -3166,7 +3302,7 @@ WHERE        (M_ACCOUNT.LEDGER = 'PURCHASE') AND (M_ACCOUNT.ACCOUNT =
               <Left>0.15cm</Left>
               <Height>1.13543cm</Height>
               <Width>18.29897cm</Width>
-              <ZIndex>2</ZIndex>
+              <ZIndex>3</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3207,7 +3343,7 @@ iif(len(first(fields!COUNTRY.value,"Company"))=0,"", vbcrlf+"Registered in Engla
               <Left>0.15cm</Left>
               <Height>0.52049cm</Height>
               <Width>18.29897cm</Width>
-              <ZIndex>3</ZIndex>
+              <ZIndex>4</ZIndex>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -3223,7 +3359,7 @@ iif(len(first(fields!COUNTRY.value,"Company"))=0,"", vbcrlf+"Registered in Engla
               <Left>0.17863cm</Left>
               <Height>0cm</Height>
               <Width>18.32757cm</Width>
-              <ZIndex>4</ZIndex>
+              <ZIndex>5</ZIndex>
               <Style>
                 <Border>
                   <Style>Solid</Style>
