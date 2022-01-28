@@ -2956,6 +2956,23 @@
       </ValidValues>
       <MultiValue>true</MultiValue>
     </ReportParameter>
+    <ReportParameter Name="YEARCODE">
+      <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>dsGetCurrentPeriod</DataSetName>
+          <ValueField>YEARCODE</ValueField>
+        </DataSetReference>
+      </DefaultValue>
+      <Prompt>Please select the Year</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>DsGetYearcode</DataSetName>
+          <ValueField>YEARCODE</ValueField>
+          <LabelField>YEARCODE</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
     <ReportParameter Name="LOCATION">
       <DataType>String</DataType>
       <DefaultValue>
@@ -3023,23 +3040,6 @@
       <Prompt>Current Period</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
-    <ReportParameter Name="YEARCODE">
-      <DataType>String</DataType>
-      <DefaultValue>
-        <DataSetReference>
-          <DataSetName>dsGetCurrentPeriod</DataSetName>
-          <ValueField>YEARCODE</ValueField>
-        </DataSetReference>
-      </DefaultValue>
-      <Prompt>Please select the Year</Prompt>
-      <ValidValues>
-        <DataSetReference>
-          <DataSetName>DsGetYearcode</DataSetName>
-          <ValueField>YEARCODE</ValueField>
-          <LabelField>YEARCODE</LabelField>
-        </DataSetReference>
-      </ValidValues>
-    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -3094,27 +3094,27 @@
         <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>1</RowIndex>
-          <ParameterName>LOCATION</ParameterName>
+          <ParameterName>YEARCODE</ParameterName>
         </CellDefinition>
         <CellDefinition>
           <ColumnIndex>0</ColumnIndex>
+          <RowIndex>2</RowIndex>
+          <ParameterName>LOCATION</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
           <RowIndex>2</RowIndex>
           <ParameterName>paylist</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>1</ColumnIndex>
-          <RowIndex>2</RowIndex>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>3</RowIndex>
           <ParameterName>Paydoc</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
-          <RowIndex>3</RowIndex>
-          <ParameterName>YEARPERIOD</ParameterName>
-        </CellDefinition>
-        <CellDefinition>
           <ColumnIndex>1</ColumnIndex>
           <RowIndex>3</RowIndex>
-          <ParameterName>YEARCODE</ParameterName>
+          <ParameterName>YEARPERIOD</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
