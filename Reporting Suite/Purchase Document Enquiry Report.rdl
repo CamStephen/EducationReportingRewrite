@@ -49,7 +49,7 @@
             <rd:UserDefined>true</rd:UserDefined>
           </QueryParameter>
           <QueryParameter Name="@SUPPLIER">
-            <Value>=JOIN(Fields!SUPPLIER.Value,",")</Value>
+            <Value>=joIn(Parameters!SUPPLIER.Value,",")</Value>
             <rd:UserDefined>true</rd:UserDefined>
           </QueryParameter>
           <QueryParameter Name="@SearchNominal">
